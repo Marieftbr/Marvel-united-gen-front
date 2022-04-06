@@ -98,6 +98,7 @@ a {
     border-radius: 5px;
     padding: 15px;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .back-office__boxes-card-icon {
     position: absolute;
@@ -122,5 +123,43 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     text-align: left;
+  }
+  .back-office__locations-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #d2d6d9;
+    border-radius: 5px;
+    padding: 30px 15px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .back-office__locations-card-icon-and-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .back-office__locations-card-icon {
+    top: 0;
+    left: 0;
+    font-size: 200%;
+    margin-right: 20px;
+    color: #262473;
+  }
+  .back-office__locations-card-name {
+    font-size: 120%;
+    font-weight: 700;
+  }
+
+  .back-office__locations-card-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
   }
 }
