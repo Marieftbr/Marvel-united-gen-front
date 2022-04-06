@@ -8,7 +8,7 @@ export default function BackOfficeBoxesCard(props) {
         return (
           <div className="back-office__boxes-card-container">
             <FontAwesomeIcon
-              icon="fa-solid fa-box-open"
+              icon="fa-solid fa-box"
               className="back-office__boxes-card-icon"
             />
             <img
