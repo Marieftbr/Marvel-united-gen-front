@@ -55,6 +55,7 @@ a {
     flex-direction: column;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 30px;
   }
   .back-office__character-card-img {
     display: flex;
