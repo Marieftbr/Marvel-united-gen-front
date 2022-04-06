@@ -1,12 +1,14 @@
 import React from "react";
-import BackOfficeForm from "../components/BackOffice_form";
+// import BackOfficeForm from "../components/BackOffice_form";
 import BackOfficeHeader from "../components/BackOffice_header";
+import BackOfficeContent from "../components/BackOffice_content";
 
 export default function BackOffice() {
   return (
     <div>
       <BackOfficeHeader />
-      <BackOfficeForm />
+      {/* <BackOfficeForm /> */}
+      <BackOfficeContent />
     </div>
   );
 }
