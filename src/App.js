@@ -4,6 +4,7 @@ import BackOffice from "./pages/Backoffice";
 import BackOfficeCharacters from "./pages/Backoffice_characters";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBoxOpen, faMask, faUser } from "@fortawesome/free-solid-svg-icons";
+import BackOfficeBoxes from "./pages/Backoffice_boxes";
 library.add(faBoxOpen, faMask, faUser);
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             path="/backoffice/characters"
             element={<BackOfficeCharacters />}
           />
+          <Route path="/backoffice/boxes" element={<BackOfficeBoxes />} />
         </Routes>
       </Router>
       <h1>Toto</h1>
