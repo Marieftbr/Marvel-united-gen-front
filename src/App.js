@@ -3,9 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BackOffice from "./pages/Backoffice";
 import BackOfficeCharacters from "./pages/Backoffice_characters";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faBoxOpen, faMask, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBox,
+  faUser,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 import BackOfficeBoxes from "./pages/Backoffice_boxes";
-library.add(faBoxOpen, faMask, faUser);
+import BackOfficeLocations from "./pages/Backoffice_locations";
+library.add(faBox, faUser, faLocationDot);
 
 function App() {
   return (
@@ -18,6 +23,10 @@ function App() {
             element={<BackOfficeCharacters />}
           />
           <Route path="/backoffice/boxes" element={<BackOfficeBoxes />} />
+          <Route
+            path="/backoffice/locations"
+            element={<BackOfficeLocations />}
+          />
         </Routes>
       </Router>
       <h1>Toto</h1>
