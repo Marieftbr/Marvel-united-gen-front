@@ -162,4 +162,39 @@ a {
     height: 250px;
     object-fit: cover;
   }
+
+  .back-office__character-form-title {
+    text-align: center;
+  }
+  .back-office__character-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+  }
+  #characterForm input[type="text"],
+  #characterForm select {
+    padding: 10px;
+    margin: 10px 0px;
+  }
+
+  .back-office__character-form-btn {
+    padding: 10px;
+    background-color: #262473;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .back-office__types-input,
+  .back-office__boxes-input {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+  }
+  .back-office__character-form-input {
+    margin: 10px 0px;
+  }
 }
