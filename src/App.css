@@ -163,22 +163,32 @@ a {
     object-fit: cover;
   }
 
-  .back-office__character-form-title {
+  .back-office__character-form-title,
+  .back-office__box-form-title,
+  .back-office__location-form-title {
     text-align: center;
   }
-  .back-office__character-form-container {
+  .back-office__character-form-container,
+  .back-office_box-form-container,
+  .back-office__location-form-container {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: auto;
   }
   #characterForm input[type="text"],
-  #characterForm select {
+  #characterForm select,
+  #boxForm input[type="text"],
+  #boxForm select,
+  #locationForm input[type="text"],
+  #locationForm select {
     padding: 10px;
     margin: 10px 0px;
   }
 
-  .back-office__character-form-btn {
+  .back-office__character-form-btn,
+  .back-office__box-form-btn,
+  .back-office__location-form-btn {
     padding: 10px;
     background-color: #262473;
     border: none;
@@ -186,15 +196,19 @@ a {
     color: #fff;
     font-weight: 700;
     font-size: 18px;
+    margin-top: 10px;
   }
 
   .back-office__types-input,
-  .back-office__boxes-input {
+  .back-office__boxes-input,
+  .back-office__location-form-select-box-container {
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
   }
-  .back-office__character-form-input {
+  .back-office__character-form-input,
+  .back-office__box-form-input,
+  .back-office_location-form-input {
     margin: 10px 0px;
   }
 }
