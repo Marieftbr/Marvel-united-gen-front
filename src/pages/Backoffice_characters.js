@@ -3,6 +3,7 @@ import BackOfficeCharacterCard from "../components/BackOffice_character-card";
 import BackOfficeHeader from "../components/BackOffice_header";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function BoCharacters() {
   const [data, setData] = useState(null);
@@ -26,6 +27,8 @@ export default function BoCharacters() {
   ) : (
     <div>
       <BackOfficeHeader />
+      <Link to="/add/character">Add</Link>
+      <Link to="">Update</Link>
       <BackOfficeCharacterCard data={data} />
     </div>
   );
