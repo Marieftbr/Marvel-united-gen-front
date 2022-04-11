@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import BackOfficeHeader from "../components/BackOffice_header";
 import BackOfficeLocationsCard from "../components/BackOffice_locations-card";
 
@@ -22,6 +23,7 @@ export default function BackOfficeLocations() {
   ) : (
     <div>
       <BackOfficeHeader />
+      <Link to="/add/location">Add</Link>
       <BackOfficeLocationsCard data={data} />
     </div>
   );

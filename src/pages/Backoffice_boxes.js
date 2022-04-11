@@ -3,6 +3,7 @@ import BackOfficeBoxesCard from "../components/BackOffice_boxes-card";
 import BackOfficeHeader from "../components/BackOffice_header";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function BackOfficeBoxes() {
   const [data, setData] = useState(null);
@@ -29,6 +30,7 @@ export default function BackOfficeBoxes() {
   ) : (
     <div>
       <BackOfficeHeader />
+      <Link to="/add/box">Add</Link>
       <BackOfficeBoxesCard data={data} />
     </div>
   );
