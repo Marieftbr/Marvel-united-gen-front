@@ -6,7 +6,10 @@ export default function BackOfficeLocationsCard(props) {
     <div>
       {props.data.map((location) => {
         return (
-          <div className="back-office__locations-card-container">
+          <div
+            className="back-office__locations-card-container"
+            key={location._id}
+          >
             <div className="back-office__locations-card-icon-and-name-container">
               <FontAwesomeIcon
                 icon="fa-solid fa-location-dot"

@@ -9,19 +9,17 @@ export default function BackOfficeBoxes() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get("http://localhost:3000/box");
-      //   console.log(response.data);
-      setData(response.data);
-      console.log(data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/box");
+        //   console.log(response.data);
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.response);
+      }
+    };
     fetchData();
   }, []);
 

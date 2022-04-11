@@ -6,7 +6,7 @@ export default function BackOfficeBoxesCard(props) {
     <div>
       {props.data.map((box) => {
         return (
-          <div className="back-office__boxes-card-container">
+          <div className="back-office__boxes-card-container" key={box._id}>
             <FontAwesomeIcon
               icon="fa-solid fa-box"
               className="back-office__boxes-card-icon"

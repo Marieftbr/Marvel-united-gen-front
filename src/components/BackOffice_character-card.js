@@ -6,7 +6,10 @@ export default function BackOfficeCharacterCard(props) {
     <div>
       {props.data.map((character) => {
         return (
-          <div className="back-office__character-card-container">
+          <div
+            className="back-office__character-card-container"
+            key={character._id}
+          >
             <FontAwesomeIcon
               icon="fa-solid fa-user"
               className="back-office__character-card-icon"
