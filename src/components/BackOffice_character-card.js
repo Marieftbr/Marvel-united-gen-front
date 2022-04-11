@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ghostSpider from "../pictures/ghost-spider.jpg";
 
 export default function BackOfficeCharacterCard(props) {
   return (
