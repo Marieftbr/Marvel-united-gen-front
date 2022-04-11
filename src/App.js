@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import BackOfficeBoxes from "./pages/Backoffice_boxes";
 import BackOfficeLocations from "./pages/Backoffice_locations";
+import CharacterForm from "./components/BackOffice_character-form";
 library.add(faBox, faUser, faLocationDot);
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             path="/backoffice/locations"
             element={<BackOfficeLocations />}
           />
+          <Route path="/add/character" element={<CharacterForm />} />
         </Routes>
       </Router>
       <h1>Toto</h1>
