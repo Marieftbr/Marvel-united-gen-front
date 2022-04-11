@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function BackOfficeHeader() {
   return (
@@ -7,9 +8,9 @@ export default function BackOfficeHeader() {
         <a href="/">Logo</a>
       </div>
       <div className="back-office__link-wrapper">
-        <a href="/characters">Characters</a>
-        <a href="/boxes">Boxes</a>
-        <a href="/locations">Locations</a>
+        <Link to="/backoffice/characters">Characters</Link>
+        <Link to="/backoffice/boxes">Boxes</Link>
+        <Link to="/backoffice/locations">Locations</Link>
       </div>
     </div>
   );
