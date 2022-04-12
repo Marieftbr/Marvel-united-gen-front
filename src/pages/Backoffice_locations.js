@@ -23,7 +23,11 @@ export default function BackOfficeLocations() {
   ) : (
     <div>
       <BackOfficeHeader />
-      <Link to="/add/location">Add</Link>
+      <div className="back-office__link-container">
+        <Link to="/add/location" className="back-office__links">
+          Add
+        </Link>
+      </div>
       <BackOfficeLocationsCard data={data} />
     </div>
   );

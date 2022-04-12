@@ -27,8 +27,14 @@ export default function BoCharacters() {
   ) : (
     <div>
       <BackOfficeHeader />
-      <Link to="/add/character">Add</Link>
-      <Link to="">Update</Link>
+      <div className="back-office__link-container">
+        <Link to="/add/character" className="back-office__links">
+          Add
+        </Link>
+        <Link to="" className="back-office__links">
+          Update
+        </Link>
+      </div>
       <BackOfficeCharacterCard data={data} />
     </div>
   );

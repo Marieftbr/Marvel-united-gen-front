@@ -28,7 +28,11 @@ export default function BackOfficeBoxes() {
   ) : (
     <div>
       <BackOfficeHeader />
-      <Link to="/add/box">Add</Link>
+      <div className="back-office__link-container">
+        <Link to="/add/box" className="back-office__links">
+          Add
+        </Link>
+      </div>
       <BackOfficeBoxesCard data={data} />
     </div>
   );
