@@ -31,9 +31,6 @@ export default function BoCharacters() {
         <Link to="/add/character" className="back-office__links">
           Add
         </Link>
-        <Link to="" className="back-office__links">
-          Update
-        </Link>
       </div>
       <BackOfficeCharacterCard data={data} />
     </div>
