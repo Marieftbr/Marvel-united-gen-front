@@ -86,6 +86,21 @@ a {
     color: #262473;
   }
 
+  .back-office__card-trash-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 120%;
+    color: #a60f1b;
+  }
+  .back-office__card-pen-icon {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    font-size: 120%;
+    color: #262473;
+  }
+
   .back-office__boxes-card-container {
     display: flex;
     align-items: center;
@@ -136,6 +151,7 @@ a {
     margin: auto;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
   }
 
   .back-office__locations-card-icon-and-name-container {
