@@ -7,13 +7,15 @@ import {
   faBox,
   faUser,
   faLocationDot,
+  faTrash,
+  faPen,
 } from "@fortawesome/free-solid-svg-icons";
 import BackOfficeBoxes from "./pages/Backoffice_boxes";
 import BackOfficeLocations from "./pages/Backoffice_locations";
 import CharacterForm from "./components/BackOffice_character-form";
 import BoxForm from "./components/BackOffice_box-form";
 import LocationForm from "./components/BackOffice_location-form";
-library.add(faBox, faUser, faLocationDot);
+library.add(faBox, faUser, faLocationDot, faTrash, faPen);
 
 function App() {
   return (
