@@ -1,8 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function BackOfficeCharacterCard(props) {
+  const navigate = useNavigate();
+
   const deleteData = async (id) => {
     await axios.delete("http://localhost:3000/character", { data: { id: id } });
     window.location.reload();
@@ -22,6 +25,9 @@ export default function BackOfficeCharacterCard(props) {
             <FontAwesomeIcon
               icon="fa-solid fa-pen"
               className="back-office__card-pen-icon"
+              onClick={() => {
+                navigate(`/update/character/${character._id}`);
+              }}
             />
             <FontAwesomeIcon
               icon="fa-solid fa-trash"
