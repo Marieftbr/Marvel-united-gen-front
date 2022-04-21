@@ -14,8 +14,10 @@ import BackOfficeBoxes from "./pages/Backoffice_boxes";
 import BackOfficeLocations from "./pages/Backoffice_locations";
 import CharacterForm from "./components/BackOffice_character-form";
 import CharacterUpdateForm from "./components/BackOffice_character-update-form";
+import BoxUpdateForm from "./components/BackOffice_box-update-form";
 import BoxForm from "./components/BackOffice_box-form";
 import LocationForm from "./components/BackOffice_location-form";
+import LocationUpdateForm from "./components/BackOffice_location-update-form";
 library.add(faBox, faUser, faLocationDot, faTrash, faPen);
 
 function App() {
@@ -39,7 +41,9 @@ function App() {
             element={<CharacterUpdateForm />}
           />
           <Route path="/add/box" element={<BoxForm />} />
+          <Route path="/update/box/:id" element={<BoxUpdateForm />} />
           <Route path="/add/location" element={<LocationForm />} />
+          <Route path="/update/location/:id" element={<LocationUpdateForm />} />
         </Routes>
       </Router>
       <h1>Toto</h1>
