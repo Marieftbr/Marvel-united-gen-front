@@ -20,7 +20,6 @@ export default function LocationUpdateForm() {
         id: id,
       },
     });
-    console.log(response.data);
     setDataAlreadySetted(response.data);
 
     setName(response.data.name);
@@ -41,7 +40,6 @@ export default function LocationUpdateForm() {
     event.preventDefault();
     await updateData();
   };
-  console.log(picture);
 
   useEffect(() => {
     fetchThisData();
@@ -53,7 +51,7 @@ export default function LocationUpdateForm() {
     <div>
       <BackOfficeHeader />
       <h1 className="back-office__character-form-title">
-        Update {dataAlreadySetted ? dataAlreadySetted.name : "a character"}
+        Update {dataAlreadySetted ? dataAlreadySetted.name : "a Location"}
       </h1>
       <form
         id="characterForm"
