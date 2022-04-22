@@ -16,7 +16,6 @@ export default function CharacterUpdateForm() {
 
   const fetchBoxes = async () => {
     const response = await axios.get("http://localhost:3000/box");
-    console.log(response.data);
     setBoxes(response.data);
     setBoxesLoaded(true);
   };
@@ -32,7 +31,7 @@ export default function CharacterUpdateForm() {
         id: id,
       },
     });
-    console.log(response.data);
+
     setDataAlreadySetted(response.data);
 
     setName(response.data.name);
@@ -63,7 +62,6 @@ export default function CharacterUpdateForm() {
     event.preventDefault();
     await updateData();
   };
-  console.log(picture);
 
   useEffect(() => {
     fetchBoxes();
