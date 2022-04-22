@@ -20,7 +20,7 @@ export default function BoxUpdateForm() {
         id: id,
       },
     });
-    console.log(response.data);
+
     setDataAlreadySetted(response.data);
 
     setName(response.data.name);
@@ -40,7 +40,6 @@ export default function BoxUpdateForm() {
     event.preventDefault();
     await updateData();
   };
-  console.log(picture);
 
   useEffect(() => {
     fetchThisData();
