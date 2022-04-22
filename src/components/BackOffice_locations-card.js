@@ -27,7 +27,7 @@ export default function BackOfficeLocationsCard(props) {
                 icon="fa-solid fa-pen"
                 className="back-office__card-pen-icon"
                 onClick={() => {
-                  navigate(`/update/box/${location._id}`);
+                  navigate(`/update/location/${location._id}`);
                 }}
               />
               <FontAwesomeIcon
