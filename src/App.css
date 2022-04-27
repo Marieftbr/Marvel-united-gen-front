@@ -241,4 +241,29 @@ a {
     border-radius: 5px;
     margin: 0px 10px;
   }
+
+  .home__card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f2eac2;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .home__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .home__name {
+    text-align: center;
+    font-weight: 700;
+  }
 }
