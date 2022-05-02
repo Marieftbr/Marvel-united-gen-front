@@ -52,12 +52,17 @@ export default function HomeForm() {
       <form onSubmit={submitForm}>
         <div className="home__nbPlayer">
           <label className="home__label">Number of players :</label>
-          <input
-            type="number"
+
+          <select
             value={numberOfPlayers}
             onChange={(event) => setNumberOfPlayers(event.target.value)}
             className="home__input"
-          />
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
         </div>
         <button className="home__btn">Generate</button>
       </form>
@@ -81,7 +86,7 @@ export default function HomeForm() {
                 );
               })}
             </div>
-            <h2 className="home__titles">Villain</h2>
+            <h1 className="home__titles">Villain</h1>
             <div className="home__villain-wrapper">
               <div key={villain._id} className="home__card-container">
                 <img
@@ -92,7 +97,7 @@ export default function HomeForm() {
                 <p className="home__name">{villain.name}</p>
               </div>
             </div>
-            <h3 className="home__titles">Locations</h3>
+            <h1 className="home__titles">Locations</h1>
             <div className="home__location-wrapper">
               {locations.map((location) => {
                 return (
@@ -108,7 +113,7 @@ export default function HomeForm() {
               })}
             </div>
 
-            <h4 className="home__titles">Boxes to take</h4>
+            <h1 className="home__titles">Boxes to take</h1>
             <div className="home__box-wrapper">
               {boxes.map((box) => {
                 return (
