@@ -71,6 +71,7 @@ export default function BoxUpdateForm() {
             );
           }}
         />
+        <label className="back-office__box-form-label">Name</label>
         <input
           type="file"
           style={{ display: "none" }}
