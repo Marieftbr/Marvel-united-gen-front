@@ -81,17 +81,20 @@ export default function CharacterForm() {
             setPicture(event.target.files[0]);
           }}
         />
-        <input
-          type="text"
-          className="back-office__character-form-input"
-          placeholder="Name"
-          value={name}
-          onChange={(event) => {
-            setName(event.target.value);
-          }}
-        />
+        <div className="back-office__form-part">
+          <label className="back-office__character-labels">Name</label>
+          <input
+            type="text"
+            className="back-office__character-form-input"
+            placeholder="Name"
+            value={name}
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
+        </div>
         <div className="back-office__types-input">
-          <label>Type</label>
+          <label className="back-office__character-labels">Type</label>
           <select name="types" id="" value={type} onChange={handleType}>
             <option value="hero">Hero</option>
             <option value="villain">Villain</option>
@@ -99,7 +102,7 @@ export default function CharacterForm() {
           </select>
         </div>
         <div className="back-office__boxes-input">
-          <label>Box</label>
+          <label className="back-office__character-labels">Box</label>
           <select name="boxes" id="" onChange={handleBox}>
             {boxes.map((box) => {
               return (
