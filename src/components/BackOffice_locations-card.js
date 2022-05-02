@@ -11,7 +11,7 @@ export default function BackOfficeLocationsCard(props) {
     window.location.reload();
   };
   return (
-    <div>
+    <div className="back-office__location-cards-wrapper">
       {props.data.map((location) => {
         return (
           <div
