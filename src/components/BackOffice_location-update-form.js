@@ -80,6 +80,7 @@ export default function LocationUpdateForm() {
             setPicture(event.target.files[0]);
           }}
         />
+        <label className="back-office__location-form-label">Name</label>
         <input
           type="text"
           className="back-office__character-form-input"
