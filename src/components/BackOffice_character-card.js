@@ -11,7 +11,7 @@ export default function BackOfficeCharacterCard(props) {
     window.location.reload();
   };
   return (
-    <div>
+    <div className="back-office__character-cards-wrapper">
       {props.data.map((character) => {
         return (
           <div
