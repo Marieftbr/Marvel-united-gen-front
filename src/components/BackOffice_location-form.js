@@ -55,6 +55,7 @@ export default function LocationForm() {
         className="back-office__location-form-container"
         onSubmit={handleSubmit}
       >
+        <label className="back-office__location-form-name-label">Name</label>
         <input
           type="text"
           placeholder="Name"
@@ -65,7 +66,7 @@ export default function LocationForm() {
           }}
         />
         <div className="back-office__location-form-select-box-container">
-          <label htmlFor="">Box</label>
+          <label className="back-office__location-form-box-label">Box</label>
           <select name="boxes" onChange={handleBox}>
             {boxes.map((box) => {
               return (
