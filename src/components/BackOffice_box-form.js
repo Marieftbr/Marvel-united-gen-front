@@ -31,6 +31,7 @@ export default function BoxForm() {
         className="back-office_box-form-container"
         onSubmit={submitData}
       >
+        <labe className="back-office__boxes-form-name-label">Name</labe>
         <input
           type="text"
           placeholder="Name of the box"
