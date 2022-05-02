@@ -12,7 +12,7 @@ export default function BackOfficeBoxesCard(props) {
   };
 
   return (
-    <div>
+    <div className="back-office__box-cards-wrapper">
       {props.data.map((box) => {
         return (
           <div className="back-office__boxes-card-container" key={box._id}>
