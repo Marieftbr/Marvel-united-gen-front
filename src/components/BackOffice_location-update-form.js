@@ -70,6 +70,7 @@ export default function LocationUpdateForm() {
               })
             );
           }}
+          className="back-office__location-update-form-img"
         />
         <input
           type="file"
