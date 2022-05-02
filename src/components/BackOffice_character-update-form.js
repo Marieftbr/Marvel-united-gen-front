@@ -93,6 +93,7 @@ export default function CharacterUpdateForm() {
               })
             );
           }}
+          className="back-office__character-img"
         />
         <input
           type="file"
@@ -103,6 +104,7 @@ export default function CharacterUpdateForm() {
             setPicture(event.target.files[0]);
           }}
         />
+        <label className="back-office__character-labels">Name</label>
         <input
           type="text"
           className="back-office__character-form-input"
@@ -113,7 +115,7 @@ export default function CharacterUpdateForm() {
           }}
         />
         <div className="back-office__types-input">
-          <label>Type</label>
+          <label className="back-office__character-labels">Type</label>
           <select name="types" value={type} onChange={handleType}>
             <option value="hero">Hero</option>
             <option value="villain">Villain</option>
@@ -121,7 +123,7 @@ export default function CharacterUpdateForm() {
           </select>
         </div>
         <div className="back-office__boxes-input">
-          <label>Box</label>
+          <label className="back-office__character-labels">Box</label>
           <select name="boxes" id="" onChange={handleBox} value={box}>
             {boxes.map((box) => {
               return (
