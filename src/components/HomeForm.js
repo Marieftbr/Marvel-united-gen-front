@@ -48,25 +48,26 @@ export default function HomeForm() {
   useEffect(() => {}, []);
 
   return (
-    <div>
-      <form action="" onSubmit={submitForm}>
+    <div className="home__form-wrapper">
+      <form onSubmit={submitForm}>
         <div className="home__nbPlayer">
-          <label htmlFor="">Number of players</label>
+          <label className="home__label">Number of players :</label>
           <input
             type="number"
             value={numberOfPlayers}
             onChange={(event) => setNumberOfPlayers(event.target.value)}
+            className="home__input"
           />
         </div>
-        <button>Generate</button>
+        <button className="home__btn">Generate</button>
       </form>
       <div className="home__result-container">
         {isLoading || !heroes ? (
-          <div>En cours de chargement...</div>
+          <div></div>
         ) : (
           <div>
-            <h1>Heroes</h1>
-            <div>
+            <h1 className="home__titles">Heroes</h1>
+            <div className="home__character-wrapper">
               {heroes.map((hero) => {
                 return (
                   <div key={hero._id} className="home__card-container">
@@ -80,8 +81,8 @@ export default function HomeForm() {
                 );
               })}
             </div>
-            <h2>Villain</h2>
-            <div>
+            <h2 className="home__titles">Villain</h2>
+            <div className="home__villain-wrapper">
               <div key={villain._id} className="home__card-container">
                 <img
                   src={villain.picture.url}
@@ -91,15 +92,15 @@ export default function HomeForm() {
                 <p className="home__name">{villain.name}</p>
               </div>
             </div>
-            <h3>Locations</h3>
-            <div>
+            <h3 className="home__titles">Locations</h3>
+            <div className="home__location-wrapper">
               {locations.map((location) => {
                 return (
                   <div key={location._id} className="home__card-container">
                     <img
                       src={location.picture.url}
                       alt="hero"
-                      className="home__picture"
+                      className="home__picture-villain"
                     />
                     <p className="home__name">{location.name}</p>
                   </div>
@@ -107,8 +108,8 @@ export default function HomeForm() {
               })}
             </div>
 
-            <h4>Boxes to take</h4>
-            <div>
+            <h4 className="home__titles">Boxes to take</h4>
+            <div className="home__box-wrapper">
               {boxes.map((box) => {
                 return (
                   <div key={box._id} className="home__card-container">
