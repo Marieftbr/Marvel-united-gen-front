@@ -81,18 +81,18 @@ export default function CharacterForm() {
             setPicture(event.target.files[0]);
           }}
         />
-        <div className="back-office__form-part">
-          <label className="back-office__character-labels">Name</label>
-          <input
-            type="text"
-            className="back-office__character-form-input"
-            placeholder="Name"
-            value={name}
-            onChange={(event) => {
-              setName(event.target.value);
-            }}
-          />
-        </div>
+
+        <label className="back-office__character-labels">Name</label>
+        <input
+          type="text"
+          className="back-office__character-form-input"
+          placeholder="Name"
+          value={name}
+          onChange={(event) => {
+            setName(event.target.value);
+          }}
+        />
+
         <div className="back-office__types-input">
           <label className="back-office__character-labels">Type</label>
           <select name="types" id="" value={type} onChange={handleType}>
