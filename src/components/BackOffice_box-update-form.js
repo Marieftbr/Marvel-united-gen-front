@@ -70,6 +70,7 @@ export default function BoxUpdateForm() {
               })
             );
           }}
+          className="back-office__box-update-form-img"
         />
         <label className="back-office__box-form-label">Name</label>
         <input
