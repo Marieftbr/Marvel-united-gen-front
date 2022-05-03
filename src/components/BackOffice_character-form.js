@@ -7,7 +7,7 @@ export default function CharacterForm() {
 
   const [picture, setPicture] = useState("");
   const [name, setName] = useState("");
-  const [type, setType] = useState("");
+  const [type, setType] = useState("hero");
   const [box, setBox] = useState("");
 
   const [boxes, setBoxes] = useState(null);
@@ -16,6 +16,7 @@ export default function CharacterForm() {
   const fetchBoxes = async () => {
     const response = await apiGet("/box");
     setBoxes(response.data);
+    setBox(response.data[0]._id);
     setIsLoading(false);
   };
 
