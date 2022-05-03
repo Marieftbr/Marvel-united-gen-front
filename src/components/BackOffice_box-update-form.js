@@ -46,7 +46,7 @@ export default function BoxUpdateForm() {
     <div>
       <BackOfficeHeader />
       <h1 className="back-office__character-form-title">
-        Update {dataAlreadySetted ? dataAlreadySetted.name : "a character"}
+        Update {dataAlreadySetted ? dataAlreadySetted.name : "a box"}
       </h1>
       <form
         id="characterForm"
