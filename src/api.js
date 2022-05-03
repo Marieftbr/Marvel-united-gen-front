@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const url = "http://localhost:3000";
+const url = "https://marvel-united-generator.herokuapp.com/";
 
 export function apiGet(path, params) {
   const token = Cookies.get("token");
