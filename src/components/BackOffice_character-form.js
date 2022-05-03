@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BackOfficeHeader from "./BackOffice_header";
-import axios from "axios";
+import { apiGet, apiPost } from "../api";
 
 export default function CharacterForm() {
   const pictureRef = React.createRef();
@@ -14,7 +14,7 @@ export default function CharacterForm() {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchBoxes = async () => {
-    const response = await axios.get("http://localhost:3000/box");
+    const response = await apiGet("/box");
     setBoxes(response.data);
     setIsLoading(false);
   };
@@ -26,10 +26,7 @@ export default function CharacterForm() {
     formData.append("type", type);
     formData.append("box_id", box);
 
-    const response = await axios.post(
-      "http://localhost:3000/character",
-      formData
-    );
+    const response = await apiPost("/character", formData);
     console.log(response.data);
   };
   const handleType = (event) => {

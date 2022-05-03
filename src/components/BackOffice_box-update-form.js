@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BackOfficeHeader from "./BackOffice_header";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import { apiGet, apiPut } from "../api";
 
 export default function BoxUpdateForm() {
   const pictureRef = React.createRef();
@@ -15,11 +15,7 @@ export default function BoxUpdateForm() {
   const { id } = useParams();
 
   const fetchThisData = async () => {
-    const response = await axios.get(`http://localhost:3000/box/${id}`, {
-      params: {
-        id: id,
-      },
-    });
+    const response = await apiGet(`/box/${id}`);
 
     setDataAlreadySetted(response.data);
 
@@ -33,7 +29,7 @@ export default function BoxUpdateForm() {
     formData.append("picture", picture);
     formData.append("name", name);
 
-    await axios.put(`http://localhost:3000/box/${id}`, formData);
+    await apiPut(`/box/${id}`, formData);
   };
 
   const handleSubmit = async (event) => {

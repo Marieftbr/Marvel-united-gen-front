@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BackOfficeHeader from "./BackOffice_header";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import { apiGet, apiPut } from "../api";
 
 export default function LocationUpdateForm() {
   const pictureRef = React.createRef();
@@ -15,11 +15,7 @@ export default function LocationUpdateForm() {
   const { id } = useParams();
 
   const fetchThisData = async () => {
-    const response = await axios.get(`http://localhost:3000/location/${id}`, {
-      params: {
-        id: id,
-      },
-    });
+    const response = await apiGet(`/location/${id}`);
     setDataAlreadySetted(response.data);
 
     setName(response.data.name);
@@ -33,7 +29,7 @@ export default function LocationUpdateForm() {
     formData.append("picture", picture);
     formData.append("name", name);
 
-    await axios.put(`http://localhost:3000/location/${id}`, formData);
+    await apiPut(`/location/${id}`, formData);
   };
 
   const handleSubmit = async (event) => {

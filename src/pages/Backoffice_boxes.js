@@ -1,9 +1,9 @@
 import React from "react";
 import BackOfficeBoxesCard from "../components/BackOffice_boxes-card";
 import BackOfficeHeader from "../components/BackOffice_header";
-import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { apiGet } from "../api";
 
 export default function BackOfficeBoxes() {
   const [data, setData] = useState(null);
@@ -12,7 +12,7 @@ export default function BackOfficeBoxes() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/box");
+        const response = await apiGet("/box");
         //   console.log(response.data);
         setData(response.data);
         setIsLoading(false);

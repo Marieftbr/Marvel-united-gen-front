@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useState } from "react";
+import { apiPost } from "../api";
 import BackOfficeHeader from "./BackOffice_header";
 
 export default function BoxForm() {
@@ -13,7 +13,7 @@ export default function BoxForm() {
     formData.append("name", name);
     formData.append("picture", picture);
 
-    const response = await axios.post("http://localhost:3000/box", formData);
+    const response = await apiPost("/box", formData);
     console.log(response.data);
   };
 

@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { apiGet, apiPost } from "../api";
 import BackOfficeHeader from "./BackOffice_header";
 
 export default function LocationForm() {
@@ -7,7 +7,7 @@ export default function LocationForm() {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchBoxes = async () => {
-    const response = await axios.get("http://localhost:3000/box");
+    const response = await apiGet("/box");
     setBoxes(response.data);
     setIsLoading(false);
   };
@@ -24,10 +24,7 @@ export default function LocationForm() {
     formData.append("box_id", box);
     formData.append("picture", picture);
 
-    const response = await axios.post(
-      "http://localhost:3000/locations",
-      formData
-    );
+    const response = await apiPost("/locations", formData);
     console.log(response.data);
   };
 

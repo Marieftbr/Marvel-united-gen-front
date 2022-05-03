@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
-import Cookies from "js-cookie";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { apiPost } from "../api";
 
 export default function BackOfficeForm(props) {

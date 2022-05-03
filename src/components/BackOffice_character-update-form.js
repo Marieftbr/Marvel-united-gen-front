@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BackOfficeHeader from "./BackOffice_header";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import { apiGet, apiPut } from "../api";
 
 export default function CharacterUpdateForm() {
   const pictureRef = React.createRef();
@@ -15,7 +15,7 @@ export default function CharacterUpdateForm() {
   const [boxesLoaded, setBoxesLoaded] = useState(false);
 
   const fetchBoxes = async () => {
-    const response = await axios.get("http://localhost:3000/box");
+    const response = await apiGet("/box");
     setBoxes(response.data);
     setBoxesLoaded(true);
   };
@@ -26,11 +26,7 @@ export default function CharacterUpdateForm() {
   const { id } = useParams();
 
   const fetchThisData = async () => {
-    const response = await axios.get(`http://localhost:3000/character/${id}`, {
-      params: {
-        id: id,
-      },
-    });
+    const response = await apiGet(`/character/${id}`);
 
     setDataAlreadySetted(response.data);
 
@@ -48,7 +44,7 @@ export default function CharacterUpdateForm() {
     formData.append("type", type);
     formData.append("box", box);
 
-    await axios.put(`http://localhost:3000/character/${id}`, formData);
+    await apiPut(`/character/${id}`, formData);
   };
   const handleType = (event) => {
     setType(event.target.value);

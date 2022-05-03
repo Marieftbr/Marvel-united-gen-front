@@ -1,6 +1,6 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { apiGet } from "../api";
 import BackOfficeHeader from "../components/BackOffice_header";
 import BackOfficeLocationsCard from "../components/BackOffice_locations-card";
 
@@ -9,7 +9,7 @@ export default function BackOfficeLocations() {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
-    const response = await axios.get("http://localhost:3000/locations");
+    const response = await apiGet("/locations");
     setData(response.data);
     setIsLoading(false);
   };

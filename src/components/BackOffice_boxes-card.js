@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { apiDelete } from "../api";
 
 export default function BackOfficeBoxesCard(props) {
   const navigate = useNavigate();
 
   const deleteData = async (id) => {
-    await axios.delete("http://localhost:3000/box", { data: { id: id } });
+    await apiDelete(`/box/${id}`);
     window.location.reload();
   };
 

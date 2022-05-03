@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { apiGet } from "../api";
 
 export default function HomeForm() {
   const [numberOfPlayers, setNumberOfPlayers] = useState("");
@@ -11,10 +11,8 @@ export default function HomeForm() {
   const [boxes, setBoxes] = useState([]);
 
   const generateParty = async () => {
-    const response = await axios.get("http://localhost:3000/new-game", {
-      params: {
-        number: numberOfPlayers,
-      },
+    const response = await apiGet("/new-game", {
+      number: numberOfPlayers,
     });
     setHeroes(response.data.heroes);
     setVillain(response.data.villain);
@@ -31,7 +29,7 @@ export default function HomeForm() {
       const character = characters[i];
       const boxId = character.box;
       if (!boxes.map((box) => box._id).includes(boxId)) {
-        const response = await axios.get(`http://localhost:3000/box/${boxId}`);
+        const response = await apiGet(`/box/${boxId}`);
         boxes.push(response.data);
       }
     }
