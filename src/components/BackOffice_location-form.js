@@ -6,17 +6,18 @@ export default function LocationForm() {
   const [boxes, setBoxes] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchBoxes = async () => {
-    const response = await apiGet("/box");
-    setBoxes(response.data);
-    setIsLoading(false);
-  };
-
   const pictureRef = React.createRef();
 
   const [name, setName] = useState("");
   const [box, setBox] = useState("");
   const [picture, setPicture] = useState("");
+
+  const fetchBoxes = async () => {
+    const response = await apiGet("/box");
+    setBoxes(response.data);
+    setBox(response.data[0]._id);
+    setIsLoading(false);
+  };
 
   const sendData = async () => {
     const formData = new FormData();
