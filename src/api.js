@@ -24,7 +24,7 @@ export function apiPost(path, body) {
 
 export function apiPut(path, body) {
   const token = Cookies.get("token");
-  return axios.post(`${url}${path}`, body, {
+  return axios.put(`${url}${path}`, body, {
     headers: {
       Authorization: token ? `Bearer ${Cookies.get("token")}` : "",
     },
@@ -33,7 +33,7 @@ export function apiPut(path, body) {
 
 export function apiDelete(path, params) {
   const token = Cookies.get("token");
-  return axios.post(`${url}${path}`, {
+  return axios.delete(`${url}${path}`, {
     params,
     headers: {
       Authorization: token ? `Bearer ${Cookies.get("token")}` : "",
