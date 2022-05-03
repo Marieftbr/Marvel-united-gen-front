@@ -25,18 +25,6 @@ export default function CharacterUpdateForm() {
   const [dataAlreadySetted, setDataAlreadySetted] = useState(null);
   const { id } = useParams();
 
-  const fetchThisData = async () => {
-    const response = await apiGet(`/character/${id}`);
-
-    setDataAlreadySetted(response.data);
-
-    setName(response.data.name);
-    setType(response.data.type);
-    setBox(response.data.box);
-    setPicture(response.data.picture.url);
-    setIsLoading(false);
-  };
-
   const updateData = async () => {
     const formData = new FormData();
     formData.append("picture", picture);
@@ -61,6 +49,18 @@ export default function CharacterUpdateForm() {
 
   useEffect(() => {
     fetchBoxes();
+    const fetchThisData = async (id) => {
+      const response = await apiGet(`/character/${id}`);
+
+      setDataAlreadySetted(response.data);
+
+      setName(response.data.name);
+      setType(response.data.type);
+      setBox(response.data.box);
+      setPicture(response.data.picture.url);
+      setIsLoading(false);
+    };
+
     fetchThisData();
   }, []);
 

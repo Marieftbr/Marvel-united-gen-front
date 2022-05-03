@@ -14,16 +14,6 @@ export default function LocationUpdateForm() {
   const [dataAlreadySetted, setDataAlreadySetted] = useState(null);
   const { id } = useParams();
 
-  const fetchThisData = async () => {
-    const response = await apiGet(`/location/${id}`);
-    setDataAlreadySetted(response.data);
-
-    setName(response.data.name);
-    setPicture(response.data.picture.url);
-
-    setIsLoading(false);
-  };
-
   const updateData = async () => {
     const formData = new FormData();
     formData.append("picture", picture);
@@ -38,6 +28,15 @@ export default function LocationUpdateForm() {
   };
 
   useEffect(() => {
+    const fetchThisData = async (id) => {
+      const response = await apiGet(`/location/${id}`);
+      setDataAlreadySetted(response.data);
+
+      setName(response.data.name);
+      setPicture(response.data.picture.url);
+
+      setIsLoading(false);
+    };
     fetchThisData();
   }, []);
 
