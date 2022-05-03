@@ -5,7 +5,7 @@
 }
 
 a {
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -49,10 +49,13 @@ body {
 
 .back-office__h1 {
   text-align: center;
+  color: #fff;
 }
 .back-office__form {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 .back-office__input {
   padding: 15px;
@@ -64,7 +67,7 @@ body {
   padding: 10px;
   font-size: 120%;
   color: #fff;
-  background-color: #262473;
+  background-color: #ee171f;
   border: none;
   border-radius: 5px;
 }
@@ -364,6 +367,22 @@ input[type="number"] {
 }
 .home__label {
   color: #fff;
+}
+.home__header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d2d6d9;
+  margin-bottom: 20px;
+}
+.home__header-links {
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+.home__header-links:hover {
+  border: 2px solid #ee171f;
 }
 
 @media (min-width: 810px) {
