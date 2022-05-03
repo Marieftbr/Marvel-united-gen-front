@@ -459,10 +459,7 @@ input[type="number"] {
     width: 20%;
     margin: 0 10px 10px 0;
   }
-  .back-office__character-cards-wrapper,
-  .back-office__box-cards-wrapper {
-    justify-content: flex-start;
-  }
+
   .back-office__character-card-img {
     width: 300px;
     height: 300px;
