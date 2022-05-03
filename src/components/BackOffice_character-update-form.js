@@ -49,7 +49,7 @@ export default function CharacterUpdateForm() {
 
   useEffect(() => {
     fetchBoxes();
-    const fetchThisData = async (id) => {
+    const fetchThisData = async () => {
       const response = await apiGet(`/character/${id}`);
 
       setDataAlreadySetted(response.data);
@@ -62,7 +62,7 @@ export default function CharacterUpdateForm() {
     };
 
     fetchThisData();
-  }, []);
+  }, [id]);
 
   return isLoading && dataAlreadySetted && boxesLoaded ? (
     <div>En cours de chargement...</div>

@@ -28,7 +28,7 @@ export default function BoxUpdateForm() {
   };
 
   useEffect(() => {
-    const fetchThisData = async (id) => {
+    const fetchThisData = async () => {
       const response = await apiGet(`/box/${id}`);
 
       setDataAlreadySetted(response.data);
@@ -38,7 +38,7 @@ export default function BoxUpdateForm() {
       setIsLoading(false);
     };
     fetchThisData();
-  }, []);
+  }, [id]);
 
   return isLoading && dataAlreadySetted ? (
     <div>En cours de chargement...</div>

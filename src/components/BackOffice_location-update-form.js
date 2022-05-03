@@ -28,7 +28,7 @@ export default function LocationUpdateForm() {
   };
 
   useEffect(() => {
-    const fetchThisData = async (id) => {
+    const fetchThisData = async () => {
       const response = await apiGet(`/location/${id}`);
       setDataAlreadySetted(response.data);
 
@@ -38,7 +38,7 @@ export default function LocationUpdateForm() {
       setIsLoading(false);
     };
     fetchThisData();
-  }, []);
+  }, [id]);
 
   return isLoading && dataAlreadySetted ? (
     <div>En cours de chargement...</div>
