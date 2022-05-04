@@ -5,7 +5,7 @@ export default function BackOfficeHeader() {
   return (
     <div className="back-office__header">
       <div className="back-office__logo-wrapper">
-        <a href="/">Logo</a>
+        <a href="/">Home</a>
       </div>
       <div className="back-office__link-wrapper">
         <Link to="/backoffice/characters">Characters</Link>
