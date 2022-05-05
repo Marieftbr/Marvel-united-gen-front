@@ -12,11 +12,10 @@ export default function BackOffice() {
     setToken(value);
     Cookies.set("token", value);
   };
-  console.log(token);
 
   return (
     <div>
-      <BackOfficeHeader />
+      <BackOfficeHeader token={token} />
 
       {token ? (
         <BackOfficeContent />
